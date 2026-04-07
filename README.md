@@ -48,6 +48,21 @@ Three layers, checked in order:
 | Audio | `audio_config`, `audio_encoder`, Whisper, Ultravox |
 | Video | `video_config`, LLaVA-Next-Video, MiniCPM-V |
 
+## Gated models
+
+For gated HuggingFace models (401/403), mmcheck falls back to the public API metadata (tags, pipeline_tag). If you want full config inspection:
+
+```bash
+export HF_TOKEN=hf_...
+mmcheck google/gemma-4-27b-it
+```
+
+Or in Python:
+
+```python
+info = check("google/gemma-4-27b-it", token="hf_...")
+```
+
 ## License
 
 MIT
