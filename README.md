@@ -11,9 +11,9 @@ pip install mmcheck
 ```python
 from mmcheck import check
 
-info = check("google/gemma-4-27b-it")
+info = check("google/gemma-4-31B-it")
 info.multimodal        # True
-info.input_modalities  # ["text", "image", "video"]
+info.input_modalities  # ['text', 'image', 'video']
 info.supports("image") # True
 info.supports("audio") # False
 ```
@@ -21,8 +21,8 @@ info.supports("audio") # False
 ## CLI
 
 ```bash
-mmcheck google/gemma-4-27b-it
-# Model:      google/gemma-4-27b-it
+mmcheck google/gemma-4-31B-it
+# Model:      google/gemma-4-31B-it
 # Multimodal: YES
 # Inputs:     text, image, video
 # Outputs:    text
@@ -30,8 +30,8 @@ mmcheck google/gemma-4-27b-it
 mmcheck meta-llama/Llama-3-8B
 # Multimodal: NO
 
-mmcheck --json google/gemma-4-27b-it
-mmcheck --offline gemma-4-27b-it
+mmcheck --json google/gemma-4-31B-it
+mmcheck --offline gemma-4-31B-it
 ```
 
 ## How it works
@@ -54,7 +54,7 @@ For gated HuggingFace models (401/403), mmcheck falls back to the public API met
 
 ```bash
 export HF_TOKEN=hf_...
-mmcheck google/gemma-4-27b-it
+mmcheck google/gemma-4-31B-it
 ```
 
 Or in Python:

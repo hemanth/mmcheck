@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "mmcheck"
-version = "0.2.1"
+version = "0.2.2"
 description = "Check if a model supports multimodal inputs and what modalities it handles"
 readme = "README.md"
 license = "MIT"
